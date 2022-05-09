@@ -165,11 +165,3 @@ while tr == True:
   else:
     pass
 
-
-
-
-
-
-
-
-
