@@ -1,3 +1,8 @@
+import colorama
+from colorama import init, Fore
+
+init(convert=True, autoreset=True)
+
 def space(a):
   time = 0
   while time < a:
@@ -112,48 +117,55 @@ def full(to):
 
 tr = True
 while tr == True:
-  try:
-    from colorama import Fore, Back, Style
+
+    
+    
+  
+    
+  space(2)
+  print(Fore.CYAN+"0(Direkt Sıra)         "+ Fore.YELLOW+"1(Tüm Sıralar)")
+  print("")
+  input1 = input("Direkt Sıra mı istersiniz yoksa o gireceğiniz sayıya kadar olan tüm sıraları mı istersiniz ? ")
+  if input1 == "0":
     space(2)
-    print(Fore.CYAN+"0(Direkt Sıra)         "+ Fore.GREEN+"1(Tüm Sıralar)")
-    print("")
-    input1 = input("Direkt Sıra mı istersiniz yoksa o gireceğiniz sayıya kadar olan tüm sıraları mı istersiniz ? ")
-    if input1 == "0":
-      space(2)
-      in_direct = input(Fore.LIGHTMAGENTA_EX + "Hangi sırayı istersiniz ? "+ Fore.RESET)
-      Fore.RESET
-      main(int(in_direct))
-      space(1)
-      print(list)
+    
+    print(Fore.LIGHTMAGENTA_EX+"Hangi sırayı istersiniz ? ")
+    in_direct = input()
+    colorama.Fore.RESET
+    main(int(in_direct))
+    space(1)
+    print(list)
 
-    elif input1 == "1":
-      space(2)
-      in_full = input(Fore.LIGHTMAGENTA_EX + "Kaç adet sıra istersiniz ? " + Fore.RESET)
-      
-      space(1)
-      full(int(in_full))
+  elif input1 == "1":
+    space(2)
+    
+    print(Fore.LIGHTMAGENTA_EX + "Kaç adet sıra istersiniz ? " + Fore.RESET)
+    in_full = input()
+    
+    space(1)
+    full(int(in_full))
 
-    input3 = input("Tekrar ister misiniz ?     "+ Fore.GREEN+"y   "+Fore.RED+"n   "+ Fore.RESET)
-    if input3 == "n":
-      tr = False
+  print("Tekrar ister misiniz ?     "+ Fore.GREEN+"y"+ Fore.RESET+"/"+Fore.RED+"n   "+ Fore.RESET)
+  input3 = input()
+  if input3 == "n":
+    tr = False
 
-    elif input3 == "No":
-      tr = False
+  elif input3 == "No":
+    tr = False
 
-    elif input3 == "NO":
-      tr = False
+  elif input3 == "NO":
+    tr = False
 
-    elif input3 == "no":
-      tr = False
+  elif input3 == "no":
+    tr = False
 
-    elif input3 == "nO":
-      tr = False
+  elif input3 == "nO":
+    tr = False
 
-    else:
-      pass
+  else:
+    pass
 
-  except:
-    print("Lütfen pip install colorama komutuyla coloramayı indirin")
+
 
 
 
